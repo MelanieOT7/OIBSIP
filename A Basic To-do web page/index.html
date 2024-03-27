@@ -67,6 +67,12 @@
           make_li.appendChild(document.createTextNode(item.value));
           list_item.appendChild(make_li);
           item.value = "";
+
+          make_li.onclick = function () {
+            this.style.textDecoration = "line-through";
+            this.style.listStyle = "square";
+            this.style.color = "yellow";
+          };
         }
       }
     </script>
