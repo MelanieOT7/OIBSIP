@@ -23,5 +23,38 @@
     ></script>
     <title>To Do</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="row">TO BE DONE</h1>
+      <br />
+      <div class="row">
+        <form class="form-inline col-sm-offset-3" style="width: 100%">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="todo-item"
+              id="box"
+              onkeydown="if (event.keyCode === 13) add_item(event);"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="button"
+              class="btn btn-primary form-control"
+              value="add"
+              onclick="add_item(event)"
+              id="button"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <ul id="list_item"></ul>
+      </div>
+    </div>
+  </body>
 </html>
