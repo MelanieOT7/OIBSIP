@@ -65,6 +65,8 @@
         if (item.value != "") {
           let make_li = document.createElement("LI");
           make_li.appendChild(document.createTextNode(item.value));
+          list_item.appendChild(make_li);
+          item.value = "";
         }
       }
     </script>
