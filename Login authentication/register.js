@@ -6,4 +6,10 @@ function registerUser(email, password) {
     alert("Email already registered. Please use a different email.");
     return;
   }
+
+  users.push({ email, password });
+  localStorage.setItem("users", JSON.stringify(users));
+  alert("Registration successful. You can now log in.");
+
+  localStorage.setItem("currentUser", email);
 }
