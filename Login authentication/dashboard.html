@@ -19,5 +19,10 @@
       </p>
       <p class="text-center"><a href="index.html" class="logout">Log Out</a></p>
     </div>
+    <script>
+      const username = localStorage.getItem("currentUser");
+
+      document.getElementById("username").textContent = username;
+    </script>
   </body>
 </html>
