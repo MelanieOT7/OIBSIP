@@ -10,4 +10,5 @@ function loginUser(username, password) {
     alert("Invalid username or password. Please try again.");
     document.getElementById("password").value = "";
   }
+  localStorage.setItem("currentUser", username);
 }
