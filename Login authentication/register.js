@@ -13,3 +13,19 @@ function registerUser(email, password) {
 
   localStorage.setItem("currentUser", email);
 }
+
+document
+  .getElementById("registrationForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const repeatPassword = document.getElementById("repeat-password").value;
+
+    if (password !== repeatPassword) {
+      alert("Passwords do not match. Please try again.");
+      return;
+    }
+    registerUser(email, password);
+  });
