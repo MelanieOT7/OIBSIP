@@ -24,6 +24,7 @@ class Login {
       }
     });
   }
+  validateFields() {}
 
   //end
 }
