@@ -24,7 +24,31 @@ class Login {
       }
     });
   }
-  validateFields() {}
+  validateFields(field) {
+    if (field.value.trim() === "") {
+      this.setStatus(
+        field,
+        `${field.previousElementSibling.innerText} cannot be blank`,
+        "error"
+      );
+      return false;
+    } else {
+      if (field.type == "password") {
+        if (field.value.length < 8) {
+          this.setStatus(
+            field,
+            `${field.previousElementSibling.innerText} must be at least 8 characters`,
+            "error"
+          );
+          return false;
+        } else {
+          this.setStatus(field, null, "success");
+          return true;
+        }
+      } else this.setStatus(field, null, "success");
+      return true;
+    }
+  }
 
   //end
 }
