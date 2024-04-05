@@ -12,3 +12,14 @@ function loginUser(username, password) {
   }
   localStorage.setItem("currentUser", username);
 }
+
+document
+  .querySelector(".loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    loginUser(username, password);
+  });
