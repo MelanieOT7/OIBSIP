@@ -1,1 +1,3 @@
-function registerUser(email, password) {}
+function registerUser(email, password) {
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+}
