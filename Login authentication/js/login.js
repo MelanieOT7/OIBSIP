@@ -49,6 +49,21 @@ class Login {
       return true;
     }
   }
+  setStatus(field, message, status) {
+    const errorMessage = field.parentElement.querySelector(".error-message");
+
+    if (status == "success") {
+      if (errorMessage) {
+        errorMessage.innerText = "";
+      }
+      field.classList.remove("input-error");
+    }
+
+    if (status == "error") {
+      errorMessage.innerText = message;
+      field.classList.add("input-error");
+    }
+  }
 
   //end
 }
